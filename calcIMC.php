@@ -16,12 +16,10 @@
     echo "</br>";
     echo "O seu altura é: " . $_POST["altura"];
     echo "</br>";
-
+    
     $peso = $_POST['peso'];
     $altura = $_POST['altura'];
     
-    
-
     function imc($altura, $peso)
     {
         $altura = str_replace(',', '.', $altura);
@@ -31,6 +29,7 @@
     echo "<hr/>";
     echo "Seu IMC é: " . imc($altura, $peso);
     echo "</br>";
+    
     if (!empty ($_POST['nome'])
       && !empty ($_POST['peso'])
       && !empty ($_POST['altura'])){
@@ -45,9 +44,14 @@
         echo "Obesidade Grau I";
     }elseif (imc($altura, $peso) <= 39.9){
         echo "Obesidade Grau II";
-    }else{
+    }elseif (imc($altura, $peso) >= 40) {
         echo "Obesidade Grau III ou Mórbida";
     }
+    else{
+        echo "favor preencher o form.";
+    }
+    
+    header("refresh:5;url=index.php");
 
     ?>
 </body>
