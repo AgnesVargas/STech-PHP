@@ -26,7 +26,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     echo "<hr/>";
     $nome = "Agnes Vargas";
     $idade = "18";
-
     if($idade >= 18){
         echo "$nome, você é maior de idade.";
     }

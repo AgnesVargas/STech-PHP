@@ -31,6 +31,10 @@
     echo "<hr/>";
     echo "Seu IMC é: " . imc($altura, $peso);
     echo "</br>";
+    if (!empty ($_POST['nome'])
+      && !empty ($_POST['peso'])
+      && !empty ($_POST['altura'])){
+    }
     if (imc($altura, $peso)< 18.5){
         echo "Abaixo do Peso";
     }elseif (imc($altura, $peso) <= 24.9){
